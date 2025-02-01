@@ -1,12 +1,27 @@
-import random
+import discord
+from bot_logic import gen_pass
+from bot_logic import flip_coin
+from discord.ext import commands
 
-caracteres = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+intents = discord.Intents.default()
+intents.message_content = True
 
-contraseña = ""
+bot = commands.Bot(command_prefix='$', intents=intents)
 
-long = int(input("Introduzca la longitud de la contraseña: "))
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f'Hola, soy un bot {bot.user}!')
 
-for i in range(long):
-    contraseña += random.choice(caracteres)
+@bot.command()
+async def bye(ctx):
+    await ctx.send(f'Adios {ctx.author.name}')
 
-print ("Tu contraseña es:", contraseña)
+@bot.command()
+async def coin(ctx):
+    await ctx.send(flip_coin())
+
+@bot.command()
+async def gen(ctx):
+    await ctx.send(gen_pass(10))
+
+bot.run('Token')
