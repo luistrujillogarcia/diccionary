@@ -2,12 +2,19 @@ import discord
 from bot_logic import gen_pass
 from bot_logic import flip_coin
 from bot_logic import gen_emodji
+import os 
+import random
+import requests
 from discord.ext import commands
 
 intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'Conectado a: {bot.user}')
 
 @bot.command()
 async def hello(ctx):
@@ -19,7 +26,7 @@ async def bye(ctx):
 
 @bot.command()
 async def coin(ctx):
-    await ctx.send(flip_coin())
+    await ctx.send(f'La moneda cayo a: {flip_coin()}')
 
 @bot.command()
 async def emoji(ctx):
@@ -66,6 +73,54 @@ async def duck(ctx):
     '''Una vez que llamamos al comando duck, 
     el programa llama a la función get_duck_image_url'''
     image_url = get_duck_image_url()
+    await ctx.send(image_url)
+
+
+def get_dog_image_url():    
+    url = 'https://random.dog/woof.json'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
+
+@bot.command('dog')
+async def dog(ctx):
+    image_url = get_dog_image_url()
+    await ctx.send(image_url)
+
+
+def get_fox_image_link():    
+    link = 'https://randomfox.ca/floof/'
+    res = requests.get(link)
+    data = res.json()
+    return data['link']
+
+@bot.command('fox')
+async def fox(ctx):
+    image_link = get_fox_image_link()
+    await ctx.send(image_link)
+
+
+def get_capy_image_url():    
+    url = 'https://api.capy.lol/v1/capybara?json=true'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
+
+@bot.command('capy')
+async def capy(ctx):
+    image_url = get_capy_image_url()
+    await ctx.send(image_url)
+
+
+def get_cat_image_url():    
+    url = 'https://api.thecatapi.com/v1/images/search'
+    res = requests.get(url)
+    data = res.json()
+    return data['url']
+
+@bot.command('cat')
+async def cat(ctx):
+    image_url = get_cat_image_url()
     await ctx.send(image_url)
 
 bot.run('Token')
