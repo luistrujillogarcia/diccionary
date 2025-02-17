@@ -104,7 +104,7 @@ def get_capy_image_url():
     url = 'https://api.capy.lol/v1/capybara?json=true'
     res = requests.get(url)
     data = res.json()
-    return data['url']
+    return data["data"]["url"]
 
 @bot.command('capy')
 async def capy(ctx):
@@ -116,11 +116,35 @@ def get_cat_image_url():
     url = 'https://api.thecatapi.com/v1/images/search'
     res = requests.get(url)
     data = res.json()
-    return data['url']
+    return data[0]["url"]
 
 @bot.command('cat')
 async def cat(ctx):
     image_url = get_cat_image_url()
     await ctx.send(image_url)
+
+
+def get_poke_image_link():    
+    link = 'https://pokeapi.co'
+    res = requests.get(link)
+    data = res.json()
+    return data["link"]
+
+@bot.command('poke')
+async def poke(ctx):
+    image_link = get_poke_image_link()
+    await ctx.send(image_link)
+
+
+def get_tokio_image_link():    
+    link = 'https://kitsu.io/api/edge/anime?filter[text]=tokyo'
+    res = requests.get(link)
+    data = res.json()
+    return data["link"]
+
+@bot.command('tokyo')
+async def tokyo(ctx):
+    image_link = get_tokio_image_link()
+    await ctx.send(image_link)
 
 bot.run('Token')
