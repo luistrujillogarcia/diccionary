@@ -1,20 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-body { font-family: 'Inter', sans-serif; background-color: #928787; color: #fdfdfd; margin: 0; padding: 0; }
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Familia de fuentes */
+    font-size: 15px; /* El tamaño de la fuente principal en el tag <p></p> */
+    background-color: #e9e3df; /* El color del fondo de la página web */
+    color: #79bd72; /* El color del texto*/ 
+}
 
-h1, h2, h3 { color: #f50468; }
+h1 {
+    color: #D6FF6B; /* El color de la cabecera */
+    font-size: 40px; /* El tamaño de la fuente de la cabecera */
+    font-family: "Playwrite IT Moderna", cursive; /* La familia tipográfica utilizada en la cabecera */
+    font-weight: 500px;
+    animation: color-change 3s infinite;
 
-a { color: #5988FF; text-decoration: none; text-decoration-color: #2c08f7; }
+}
 
-a:hover { text-decoration: underline; }
-
-button { background-color: #D6FF6B; border: 2px solid #5988FF; color: #5988FF; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease; }
-
-button:hover { background-color: #FD98FB; color: #FFFFFF; }
-
-.container { border: 2px solid #1cda3b; padding: 20px; margin: 20px; border-radius: 10px; }
+h2 {
+    color: #e4a3ac; /* El color de la cabecera */
+    font-size: 20px; /* El tamaño de la fuente de la cabecera */
+    font-family: "Playwrite IT Moderna", cursive; /* La familia tipográfica utilizada en la cabecera */
+    font-weight: 500px;
+}
 
 img{
-    width: 750;
-    height: 350px;
+    width: 600px;
+    height: 300px;
+    border-radius: 2px; 
+    animation: color-change 3s infinite;
+}
+
+p {
+    color: #1754c4;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+@keyframes color-change {
+    0% {
+      color: rgb(127, 180, 127);
+      font-size: 20px;
+    }
+  
+    50% {
+      color: rgb(233, 163, 151);
+      font-size: 30px;
+    }
+  
+    100% {
+      color: rgb(175, 110, 170);
+      font-size: 20px;
+    }
+}
+
+@keyframes border-change {
+    0% {
+      border: 1px soild rgb(61, 137, 172);
+    }
+  
+    50% {
+        border: 1px soild rgb(223, 23, 146);
+    }
+  
+    100% {
+        border: 1px soild rgb(189, 207, 85);
+    }
+}
+
+h1 {
+    animation: color-change 3s infinite;
+}
+
+img{
+    animation: color-change 3s infinite;
 }
