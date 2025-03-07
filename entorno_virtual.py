@@ -22,6 +22,15 @@ information = ["La dependencia de las tecnologías forma parte de las dependenci
 
 @app.route("/")
 def hello_world():
-    return f'<h1>{random.choice(information)}</h1>'
+    return '<h1>Tratamiento Psicológico para la Dependencia de la Tecnología en Madrid</h1> <a href="/random_facts">¡Ver un dato aleatorio!</a>'
+
+@app.route("/random_facts")
+def random_facts():
+    return f'<p>{random.choice(information)}</p>'
+
+@app.route("/flip_coin")
+def flip_coin():
+    result = random.choice(["Cara", "Cruz"])
+    return f'<h1>Resultado: {result}</h1>'
 
 app.run(debug=True)
