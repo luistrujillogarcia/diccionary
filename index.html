@@ -1,61 +1,48 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Tratamiento Psicológico para la Dependencia de la Tecnología en Madrid</title>
-    <link rel="stylesheet" href="style.css">"
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Calculadora de eficiencia energética para hogares inteligentes</title>
 </head>
 <body>
-    <h1>¿Qué es la dependencia de la tecnología?</h1>
-    <p>La dependencia de las tecnologías forma parte de las dependencias comportamentales 
-        y se caracteriza por un uso abusivo de los aparatos electrónicos, generalmente 
-        conectados a Internet, como el móvil, la tablet, el ordenador o la videoconsola.</p>
+  <header class="header">
+    <div class="header__text">
+      <h1>Calcule la eficiencia energética de su hogar</h1>
+      <p>Tome la iniciativa y resuelva el problema del consumo excesivo de energía</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title">Selecciona el tamaño de tu hogar:</h2>
+    <ul class="list">
+      <li class="list__item">
+        <a href="/3">
+        <img class="item__img" src="../static/img/home.svg" alt="home">
+        <span>Un hogar pequeño</span></a>
+      </li>
+      <!-- Asignación #1 -->
+      <li class="list__item">
+        <a href="/6">
+        <img class="item__img" src="../static/img/home.svg" alt="home">
+        <span>Un hogar mediano</span></a>
+      </li>
+      <li class="list__item">
+        <a href="/9">
+        <img class="item__img" src="../static/img/home.svg" alt="home">
+        <span>Un hogar grande</span></a>
+      <!--  -->
+      </li>
+    </ul>
+    {% endblock %}
+  </main>
+  <footer>
 
-            <img src="https://www.pantallasamigas.net/wp-content/uploads/2016/10/Conferencia-Montilla-C%C3%B3rdoba-PantallasAmigas-Uso-Abusivo-TIC-Infancia-Adolescencia-Cartel.png" alt="Image 1">
-        
-        <p>La consecuencia más directa de esta dependencia es la pérdida de control de la conducta,
-             donde la persona trata de aliviar su malestar emocional a través de las tecnologías de forma sistemática.</p>
-        <p>Se genera, por tanto, una dependencia de los elementos tecnológicos y de los estímulos que nacen de ellos 
-            (redes sociales, videojuegos, apps…), causando sentimientos de ansiedad, irritabilidad, depresión y desesperación 
-            cuando no puede hacer uso de ellos. La persona con esta dependencia necesita aumentar cada vez más el tiempo de conexión, 
-            aumentando así su tolerancia.</p>
-            
-    <h2>SÍNTOMAS DE LA DEPENDENCIA DE LA TECNOLOGÍA</h2>
-             <ul>
-                   <li>Los principales signos son:</li>
-                        <p> - Privación del sueño por mantenerse conectado.</p>
-                        <p> - Descuidar actividades diarias (sociales, académicas, higiene…).</p>
-                        <p> - Obtener quejas de gente cercana sobre el tiempo empleado en las TIC.</p>
-                        <p> - Pensar constantemente en ello.</p>
-                        <p> - Mostrarse irritable cuando no se pueden conectar.</p>
-                        <p> - Intentar reducir el uso sin éxito.</p>
-                        <p> - Aislamiento social o cambios en sus relaciones sociales.</p>
-                        <p> - Sentir una alegría anómala cuando se está conectado.</p>
-                        <p> - Cambios en el estado de ánimo.</p>
-                        <p> - Cambios o sintomatología física o psicosomática.</p>
-                    
-                    <li>Adicionalmente, en algunos casos se presentan los siguientes síntomas:</li>
-                        <p> 1. Necesidad compulsiva de información:</p>
-                            <p>Las personas que presentan este tipo de dependencia, sienten una fuerte 
-                                necesidad por estar informados constantemente, sobre todo en lo referente 
-                                a los temas relacionados con lo que resulta interesante en su círculo social.</p>
-                        <p> 2. Necesidad de aparatos tecnológicos de vanguardia:</p>
-                            <p>A medida que la dependencia de las nuevas tecnologías se hace más intensa, 
-                                al sujeto no le basta con satisfacer su necesidad de información a través de cualquier dispositivo, 
-                                sino que este necesitará de uno que le brinde los últimos avances tecnológicos para sentir que satisface su necesidad.</p>
-                        <p> 3. Recursos limitados al ámbito tecnológico:</p>
-                            <p>A menudo las personas adictas a la tecnología convierten estos elementos en sus únicos recursos resolutivos. 
-                                Es decir, estas personas suelen ser incapaces de afrontar cualquier situación en la vida sin apoyarse en aparatos tecnológicos, 
-                                lo que a menudo limita su capacidad de solventar situaciones en contextos ajenos a las pantallas.</p>
-            </ul>  
-     <img src="https://media.licdn.com/dms/image/v2/D4E12AQH3ZwEFUN1kfw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1677648545344?e=2147483647&v=beta&t=F-JGMHKGIDj81JwoKGYDtWbe-3FwZxhMsn7FZFJoYoI" alt="Image 2">
-    
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.188425443!2d2.1496324758787506!3d41.38941847129958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2853c31dd2b%3A0x7bacaced73cdac27!2sHospital%20Cl%C3%ADnico%20de%20Barcelona!5e1!3m2!1ses-419!2sus!4v1740852690934!5m2!1ses-419!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/NjE1h5Kefcc?si=jwxWpdMz8HJ5uzS9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-     <iframe src="https://centrumpsicologos.com/tratamientos/adicciones/adiccion-a-internet-y-las-nuevas-tecnologias/" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-     <iframe src="https://www.ctvtietar.com/tratamiento/tratamiento-tecnologia-madrid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+  </footer>
 </body>
 </html>
